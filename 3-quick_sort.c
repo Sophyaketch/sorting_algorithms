@@ -8,6 +8,7 @@
  * @low: The lower index of the partition.
  * @high: The higher index of the partition.
  * @size: The size of the array (for printing).
+ * Return: The final partition index.
  */
 int lomuto_partition(int *array, int low, int high, size_t size)
 {
