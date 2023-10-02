@@ -1,5 +1,5 @@
 #include "sort.h"
-
+size_t n;
 /**
  * swap - Swaps two integers.
  * @a: The first integer.
@@ -31,12 +31,12 @@ int lomuto_partition(int *array, int low, int high)
 		{
 			i++;
 			swap(&array[i], &array[j]);
-			 print_array(array, high);
+			 print_array(array, n);
 		}
 	}
 
 	swap(&array[i + 1], &array[high]);
-	 print_array(array, high);
+	 print_array(array, n);
 	return (i + 1);
 }
 
@@ -64,6 +64,8 @@ void quick_sort_recursive(int *array, int low, int high)
  */
 void quick_sort(int *array, size_t size)
 {
+	n = size;
 	quick_sort_recursive(array, 0, size - 1);
+
 }
 
